@@ -5,11 +5,14 @@ volumes:
 
 
 services:
-  app:
-    build: ./
+  client:
+    build: ./services/client/
     volumes:
-      - ./src/:/usr/local/src/
+      - ./services/client/src/:/usr/local/src/
       - node-modules:/usr/local/src/node_modules
     working_dir: /usr/local/src
     tty: true
-    container_name: chanablog
+    container_name: chanablog-client
+    ports:
+      - 3000:3000
+      - 3001:3001
