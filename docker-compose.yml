@@ -16,3 +16,28 @@ services:
     ports:
       - 3000:3000
       - 3001:3001
+
+  swagger-editor:
+    image: swaggerapi/swagger-editor
+    container_name: "chanablog-swagger-editor"
+    ports:
+      - "8001:8080"
+
+  swagger-ui:
+    image: swaggerapi/swagger-ui
+    container_name: "chanablog-swagger-ui"
+    ports:
+      - "8002:8080"
+    volumes:
+      - ./services/api/openapi.yml:/openapi.yml
+    environment:
+      SWAGGER_JSON: /openapi.yml
+
+  swagger-api:
+    image: stoplight/prism:latest
+    container_name: "chanablog-swagger-api"
+    ports:
+      - "8003:4010"
+    command: mock -h 0.0.0.0 /openapi.yml
+    volumes:
+      - ./services/api/openapi.yml:/openapi.yml
