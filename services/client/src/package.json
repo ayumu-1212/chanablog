@@ -1,4 +1,13 @@
 {
+  "private": true,
+  "workspaces": [
+    "apps/cds"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint"
+  },
   "dependencies": {
     "turbo": "^1.8.8"
   }
