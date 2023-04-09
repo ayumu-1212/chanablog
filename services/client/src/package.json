@@ -1,7 +1,8 @@
 {
   "private": true,
   "workspaces": [
-    "apps/cds"
+    "apps/cds",
+    "packages/*"
   ],
   "scripts": {
     "build": "turbo run build",
