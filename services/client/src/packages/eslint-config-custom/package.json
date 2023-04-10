@@ -1,0 +1,21 @@
+{
+  "name": "eslint-config-custom",
+  "version": "1.0.0",
+  "private": true,
+  "description": "base of eslint",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "dependencies": {
+    "eslint": "^8.38.0",
+    "eslint-config-next": "^13.3.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-config-turbo": "^1.8.8",
+    "eslint-plugin-react": "^7.32.2"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.4"
+  }
+}
