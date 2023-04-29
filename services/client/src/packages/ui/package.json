@@ -1,0 +1,12 @@
+{
+  "name": "ui",
+  "version": "1.0.0",
+  "description": "package of ui components",
+  "main": "index.tsx",
+  "devDependencies": {
+    "@types/react": "^18.0.35",
+    "react": "^18.2.0",
+    "typescript": "^5.0.4",
+    "tsconfig": "*"
+  }
+}
